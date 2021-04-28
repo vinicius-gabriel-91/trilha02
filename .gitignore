@@ -1,0 +1,5 @@
+.docker/
+.idea/
+README.md
+docker-compose.yml
+imagens/
