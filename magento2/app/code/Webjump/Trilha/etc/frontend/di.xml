@@ -1,0 +1,5 @@
+<config>
+    <type name="Magento\Framework\App\Action\Action">
+      <plugin name="dispatch_plugin" type="Webjump\Trilha\Plugins\Dispatch"/>
+    </type>
+</config>
