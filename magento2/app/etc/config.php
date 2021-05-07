@@ -325,7 +325,11 @@ return [
         'Vertex_Tax' => 1,
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,
+        'Webjump_ExerciseEight' => 1,
+        'Webjump_ExerciseSix' => 1,
+        'Webjump_ExerciseSixB' => 1,
         'Webjump_HelloWorld' => 1,
+        'Webjump_Trilha' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];
