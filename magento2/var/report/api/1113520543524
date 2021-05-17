@@ -1,0 +1,1 @@
+"Fatal Error: 'Class Webjump\\ExerciseEight\\Model\\ExerciseEight contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Webjump\\ExerciseEight\\Api\\Data\\ExerciseEightInterface::setOwnerId)' in '\/var\/www\/html\/app\/code\/Webjump\/ExerciseEight\/Model\/ExerciseEight.php' on line 11"

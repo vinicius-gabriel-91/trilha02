@@ -294,6 +294,7 @@ class Elasticsearch implements ClientInterface
         $params = [
             'index' => $index,
             'type' => $entityType,
+            'include_type_name' => true,
             'body' => [
                 $entityType => [
                     'properties' => [],

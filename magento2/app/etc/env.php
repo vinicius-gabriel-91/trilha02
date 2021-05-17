@@ -131,5 +131,14 @@ return [
     ],
     'install' => [
         'date' => 'Wed, 28 Apr 2021 20:01:29 +0000'
+    ],
+    'system' => [
+        'default' => [
+            'catalog' => [
+                'search' => [
+                    'engine' => 'elasticsearch7'
+                ]
+            ]
+        ]
     ]
 ];

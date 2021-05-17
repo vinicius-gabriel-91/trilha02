@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Webjump\ExerciseEight\Api\ExerciseEightRepositoryInterface" type="Webjump\ExerciseEight\Model\ExerciseEightRepository"/>
+    <preference for="Webjump\ExerciseEight\Api\Data\ExerciseEightInterface" type="Webjump\ExerciseEight\Model\ExerciseEight"/>
+    <preference for="Webjump\ExerciseEight\Api\Data\ExerciseEightSearchResultInterface" type="Webjump\ExerciseEight\Model\ExerciseEightSearchResult"/>
+</config>

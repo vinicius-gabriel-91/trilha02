@@ -487,6 +487,7 @@ class ComposerStaticInit138943be3ebafc277d71a397a20bf626
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'aa75ea0761a2f40c1f3b32ad314f86c4' => __DIR__ . '/..' . '/phpseclib/mcrypt_compat/lib/mcrypt.php',
+        '0bd54e447b74957219be7d8540c9ff65' => __DIR__ . '/..' . '/honl/magento2-templatehints/registration.php',
         '43a898c2b52882ecca1f7b0558d3af2c' => __DIR__ . '/..' . '/magento/composer-root-update-plugin/registration.php',
         'eda65932675b68b5aee4503e0762d64d' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
@@ -993,6 +994,7 @@ class ComposerStaticInit138943be3ebafc277d71a397a20bf626
             'Hoa\\Event\\' => 10,
             'Hoa\\Console\\' => 12,
             'Hoa\\Consistency\\' => 16,
+            'Ho\\Templatehints\\' => 17,
         ),
         'G' => 
         array (
@@ -2860,6 +2862,10 @@ class ComposerStaticInit138943be3ebafc277d71a397a20bf626
         'Hoa\\Consistency\\' => 
         array (
             0 => __DIR__ . '/..' . '/hoa/consistency',
+        ),
+        'Ho\\Templatehints\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/honl/magento2-templatehints',
         ),
         'GuzzleHttp\\Stream\\' => 
         array (

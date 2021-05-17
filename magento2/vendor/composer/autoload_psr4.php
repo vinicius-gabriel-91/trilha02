@@ -456,6 +456,7 @@ return array(
     'Hoa\\Event\\' => array($vendorDir . '/hoa/event'),
     'Hoa\\Console\\' => array($vendorDir . '/hoa/console'),
     'Hoa\\Consistency\\' => array($vendorDir . '/hoa/consistency'),
+    'Ho\\Templatehints\\' => array($vendorDir . '/honl/magento2-templatehints'),
     'GuzzleHttp\\Stream\\' => array($vendorDir . '/ezimuel/guzzlestreams/src'),
     'GuzzleHttp\\Ring\\' => array($vendorDir . '/ezimuel/ringphp/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
