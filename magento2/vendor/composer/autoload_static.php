@@ -490,6 +490,7 @@ class ComposerStaticInit138943be3ebafc277d71a397a20bf626
         '0bd54e447b74957219be7d8540c9ff65' => __DIR__ . '/..' . '/honl/magento2-templatehints/registration.php',
         '43a898c2b52882ecca1f7b0558d3af2c' => __DIR__ . '/..' . '/magento/composer-root-update-plugin/registration.php',
         'eda65932675b68b5aee4503e0762d64d' => __DIR__ . '/..' . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+        '94dd8aee7c44774105b92eb6195e7ee0' => __DIR__ . '/..' . '/magento2translations/language_pt_br/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 

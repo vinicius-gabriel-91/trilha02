@@ -12,8 +12,9 @@
     },
     "version": "2.4.2",
     "require": {
+        "magento/composer-root-update-plugin": "~1.1",
         "magento/product-community-edition": "2.4.2",
-        "magento/composer-root-update-plugin": "~1.1"
+        "magento2translations/language_pt_br": "dev-master"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -76,5 +77,16 @@
     ],
     "extra": {
         "magento-force": "override"
+    },
+        "scripts": {
+        "g": "rm -rf generated",
+        "cf": "./bin/magento c:f",
+        "clean": [
+            "@cf",
+            "@g"
+        ]
+    },
+    "scripts-descriptions": {
+    "clean": "Roda um c:f e apaga a generated"
     }
 }

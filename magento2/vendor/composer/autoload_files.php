@@ -489,5 +489,6 @@ return array(
     '0bd54e447b74957219be7d8540c9ff65' => $vendorDir . '/honl/magento2-templatehints/registration.php',
     '43a898c2b52882ecca1f7b0558d3af2c' => $vendorDir . '/magento/composer-root-update-plugin/registration.php',
     'eda65932675b68b5aee4503e0762d64d' => $vendorDir . '/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/_bootstrap.php',
+    '94dd8aee7c44774105b92eb6195e7ee0' => $vendorDir . '/magento2translations/language_pt_br/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );
