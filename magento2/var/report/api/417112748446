@@ -1,0 +1,1 @@
+"Fatal Error: 'Declaration of Trilha\\Pet\\Model\\Pet::getCreatedAt() must be compatible with Trilha\\Pet\\Api\\Data\\PetInterface::getCreatedAt(): string' in '\/var\/www\/html\/app\/code\/Trilha\/Pet\/Model\/Pet.php' on line 44"

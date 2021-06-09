@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Trilha\Pet\Api\PetRepositoryInterface" type="Trilha\Pet\Model\PetRepository"/>
+    <preference for="Trilha\Pet\Api\Data\PetInterface" type="Trilha\Pet\Model\Pet"/>
+    <preference for="Trilha\Pet\Api\Data\PetSearchResultsInterface" type="Trilha\Pet\Model\PetSearchResults"/>
+</config>
