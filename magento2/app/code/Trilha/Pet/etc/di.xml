@@ -4,4 +4,11 @@
     <preference for="Trilha\Pet\Api\PetRepositoryInterface" type="Trilha\Pet\Model\PetRepository"/>
     <preference for="Trilha\Pet\Api\Data\PetInterface" type="Trilha\Pet\Model\Pet"/>
     <preference for="Trilha\Pet\Api\Data\PetSearchResultsInterface" type="Trilha\Pet\Model\PetSearchResults"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="pet_kind_grid_data_source" xsi:type="string">Trilha\Pet\Model\ResourceModel\Pet\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
