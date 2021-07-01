@@ -51,10 +51,7 @@
             </action>
             <action name="edit">
                 <settings>
-                    <callback>
-                        <target>editSelected</target>
-                        <provider>customer_listing.customer_listing.customer_columns_editor</provider>
-                    </callback>
+                    <url path="*/pet/new"/>
                     <type>edit</type>
                     <label translate="true">Edit</label>
                 </settings>
@@ -90,12 +87,13 @@
             </settings>
         </column>
         <column name="name" sortOrder="20">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Name</item>
-                </item>
-            </argument>
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Shablaus</label>
+            </settings>
         </column>
         <column name="description" sortOrder="30">
             <argument name="data" xsi:type="array">

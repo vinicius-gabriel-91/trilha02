@@ -6,6 +6,7 @@ namespace Trilha\Pet\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
 
+
 interface PetInterface extends ExtensibleDataInterface
 {
     const ENTITY_ID = 'entity_id';
@@ -15,6 +16,7 @@ interface PetInterface extends ExtensibleDataInterface
 
     /**
      * @param $entityId
+     * @return mixed
      */
     public function setEntityId($entityId);
 

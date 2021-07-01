@@ -3,13 +3,16 @@
 
 namespace Trilha\Pet\Model;
 
+use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Trilha\Pet\Api\Data\PetInterface;
+use Trilha\Pet\Api\Data\PetSearchResultsInterfaceFactory;
 use Trilha\Pet\Api\PetRepositoryInterface;
+use Trilha\Pet\Api\searchResultsFactory;
 use Trilha\Pet\Model\ResourceModel\Pet as PetResource;
 use Trilha\Pet\Model\ResourceModel\Pet\CollectionFactory;
-use Trilha\Pet\Model\PetFactory;
 
 class PetRepository implements PetRepositoryInterface
 {
@@ -28,17 +31,26 @@ class PetRepository implements PetRepositoryInterface
      * @var \Trilha\Pet\Model\PetFactory
      */
     private $petFactory;
+    private SearchCriteriaBuilder $searchCriteriaBuilder;
+    private CollectionProcessorInterface $collectionProcessor;
+    private PetSearchResultsInterfaceFactory $petSearchResults;
 
     public function __construct(
         PetResource $petResource,
         CollectionFactory $collectionFactory,
-        PetFactory $petFactory
+        PetFactory $petFactory,
+        SearchCriteriaBuilder $searchCriteriaBuilder,
+        CollectionProcessorInterface $collectionProcessor,
+        PetSearchResultsInterfaceFactory $petSearchResults
     )
     {
 
         $this->petResource = $petResource;
         $this->collectionFactory = $collectionFactory;
         $this->petFactory= $petFactory;
+        $this->searchCriteriaBuilder = $searchCriteriaBuilder;
+        $this->collectionProcessor = $collectionProcessor;
+        $this->petSearchResults = $petSearchResults;
     }
 
     /**
@@ -94,5 +106,28 @@ class PetRepository implements PetRepositoryInterface
             throw new CouldNotSaveException(__('Could not delete Pet'), $e);
         }
 
+    }
+
+    /**
+     * @param SearchCriteriaInterface $criteria
+     * @return \Trilha\Pet\Api\Data\PetSearchResultsInterface
+     */
+    public function getList(SearchCriteriaInterface $criteria = null): \Trilha\Pet\Api\Data\PetSearchResultsInterface
+    {
+        $collection = $this->collectionFactory->create();
+
+        if($criteria == null) {
+            $criteria = $this->searchCriteriaBuilder->create();
+            $criteria->setPageSize(100);
+        } else {
+            $this->collectionProcessor->process($criteria, $collection);
+        }
+
+        $searchResult = $this->petSearchResults->create();
+        $searchResult->setItems($collection->getItems());
+        $searchResult->setTotalCount($collection->getSize());
+        $searchResult->setSearchCriteria($criteria);
+
+        return $searchResult;
     }
 }

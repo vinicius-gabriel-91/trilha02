@@ -24,4 +24,10 @@ interface PetRepositoryInterface
      * @return bool
      */
     public function delete(int $id): bool;
+
+    /**
+     * @param SearchCriteriaInterface $criteria
+     * @return \Trilha\Pet\Api\Data\PetSearchResultsInterface
+     */
+    public function getList(SearchCriteriaInterface $criteria): \Trilha\Pet\Api\Data\PetSearchResultsInterface;
 }

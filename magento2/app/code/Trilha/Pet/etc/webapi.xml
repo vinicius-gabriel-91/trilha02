@@ -19,4 +19,16 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
+    <route method="GET" url="/V1/Pet/getList">
+        <service class="Trilha\Pet\Model\PetRepository" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/Pet/petKindList">
+        <service class="Trilha\Pet\Model\PetAttributeSource" method="petKindList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
 </routes>
