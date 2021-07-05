@@ -49,14 +49,13 @@ class DataProvider extends AbstractDataProvider
     public function getData(): array
     {
         $pet = $this->petFactory->create();
+        if (!$this->action->getRequest()->getPostValue()){
+            return [];
+        }
         $id = $this->action->getRequest()->getPostValue()['selected'];
         $this->pet->load($pet, $id);
-        $result[$pet->getId()]['general'] = $pet->getData();
-        var_dump($result);
+        $result[$pet->getId()] = $pet->getData();
         return $result;
     }
 }
-//        $result = [];
-//        foreach ($this->collection->getItems() as $item){
-//            $result['general'] = $item->getData();
-//        }
+

@@ -21,7 +21,7 @@
    </argument>
    <dataSource name="pet_kind_form_data_source">
       <argument name="dataProvider" xsi:type="configurableObject">
-         <argument name="class" xsi:type="string">Trilha\Pet\Ui\DataProviderCollection</argument>
+         <argument name="class" xsi:type="string">Trilha\Pet\Ui\DataProvider</argument>
          <argument name="name" xsi:type="string">pet_kind_form_data_source</argument>
          <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
          <argument name="requestFieldName" xsi:type="string">entity_id</argument>
