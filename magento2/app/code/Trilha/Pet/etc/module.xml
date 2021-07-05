@@ -3,6 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Trilha_Pet">
         <sequence>
+            <module name="Magento_Theme"/>
             <module name="Magento_Customer"/>
         </sequence>
     </module>

@@ -3,4 +3,7 @@
 	<extension_attributes for="Magento\Customer\Api\Data\CustomerInterface">
 		<attribute code="pet_kind" type="int"/>
 	</extension_attributes>
+    <extension_attributes for="Magento\Customer\Api\Data\CustomerInterface">
+		<attribute code="new_pet_kind" type="string"/>
+	</extension_attributes>
 </config>

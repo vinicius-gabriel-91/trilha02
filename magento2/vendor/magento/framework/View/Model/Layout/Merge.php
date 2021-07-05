@@ -274,11 +274,13 @@ class Merge implements \Magento\Framework\View\Layout\ProcessorInterface
     {
         if (is_array($handleName)) {
             foreach ($handleName as $name) {
+//                echo $name . "<br/>";
                 $this->handles[$name] = 1;
             }
         } else {
             $this->handles[$handleName] = 1;
         }
+//        echo $handleName . "<br/>";
         return $this;
     }
 

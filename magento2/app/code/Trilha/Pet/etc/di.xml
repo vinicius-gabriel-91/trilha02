@@ -11,4 +11,7 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Customer\Model\Customer">
+        <plugin name="update_customer_name" type="Trilha\Pet\Plugins\UpdateCustomerName"/>
+    </type>
 </config>
