@@ -324,6 +324,7 @@ return [
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
         'Trilha_Pet' => 1,
+        'Trilha_PetGraphQl' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,

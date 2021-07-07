@@ -9,7 +9,7 @@ use Magento\Framework\View\Element\UiComponentFactory;
 
 class PetActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
-    const URL_PATH_EDIT = 'Trilha_Pet/Pet/edit';
+    const URL_PATH_EDIT = 'trilha_pet/pet/edit';
 
     /**
      * @var UrlInterface

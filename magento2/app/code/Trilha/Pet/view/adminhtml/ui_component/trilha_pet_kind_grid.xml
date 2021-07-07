@@ -98,7 +98,7 @@
         </column>
         <actionsColumn name="actions" class="Trilha\Pet\Ui\Component\Listing\Column\PetActions">
             <settings>
-                <indexField>ibge_id</indexField>
+                <indexField>entity_id</indexField>
                 <resizeEnabled>false</resizeEnabled>
                 <resizeDefaultWidth>107</resizeDefaultWidth>
             </settings>
