@@ -1,0 +1,55 @@
+type Query {
+    petKindList(
+        pageSize: Int = 10
+            @doc(description: "How many items should show on page")
+    ): petKindListOutput
+        @resolver(
+            class: "\\Trilha\\PetGraphQl\\Model\\Resolver\\PetKindList"
+        )
+            @doc(description: "The implementation to resolve petKind")
+    petKind(
+        id: Int @doc(description: "Id of the Pet Kind")
+    ): petKindOutput
+        @resolver(
+            class: "\\Trilha\\PetGraphQl\\Model\\Resolver\\PetKind"
+        )
+}
+
+type Mutation {
+    petKindDelete(
+        id: Int
+            @doc(description: "Id of the Pet Kind")
+    ): Boolean
+        @resolver(
+            class: "\\Trilha\\PetGraphQl\\Model\\Resolver\\PetKindDelete"
+        )
+}
+
+type Mutation {
+    petKindSave(
+        name: String
+            @doc(description: "Pet's name")
+        description: String
+            @doc(description: "Pet's description")
+        id: Int = null
+            @doc(description: "Id of the Pet Kind")
+    ): Boolean
+        @resolver(
+            class: "\\Trilha\\PetGraphQl\\Model\\Resolver\\PetKindSave"
+        )
+}
+
+type petKindListOutput {
+    total_count: Int @doc(description: "")
+    items: [PetKind] @doc(description: "")
+}
+
+type petKindOutput {
+    item: [PetKind] @doc(description: "")
+}
+
+type PetKind {
+    entity_id: Int @doc(description: "")
+    name: String @doc(description: "")
+    description: String @doc(description: "")
+}

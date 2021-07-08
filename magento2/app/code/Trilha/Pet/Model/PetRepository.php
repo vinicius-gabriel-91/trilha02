@@ -84,7 +84,14 @@ class PetRepository implements PetRepositoryInterface
     public function getById(int $id): PetInterface
     {
         $pet = $this->petFactory->create();
-        $this->petResource->load($pet, $id);
+        try {
+            $this->petResource->load($pet, $id);
+            if ($pet->getEntityId() == 0){
+                throw new \Exception();
+            }
+        }catch (\Exception $e) {
+            throw new \Exception('Invalid Id');
+        }
 
         return $pet;
     }
