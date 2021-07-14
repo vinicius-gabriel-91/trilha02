@@ -10,6 +10,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Controller\Result\RedirectFactory;
 use Magento\Framework\HTTP\PhpEnvironment\Request;
+use  Magento\Framework\Message\ManagerInterface;
 
 
 
@@ -36,6 +37,10 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
      * @var ResultFactory|\PHPUnit\Framework\MockObject\MockObject
      */
     private $resultFactoryMock;
+    /**
+     * @var ManagerInterface|\PHPUnit\Framework\MockObject\MockObject
+     */
+    private $messageManagerMock;
 
 
     protected function setUp(): void
@@ -46,6 +51,7 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
         $this->redirectFactory = $this->createMock(RedirectFactory::class);
         $this->resultRedirect = $this->createMock(Redirect::class);
         $this->resultFactoryMock = $this->createMock(ResultFactory::class);
+        $this->messageManagerMock = $this->createMock(ManagerInterface::class);
 
         $this->contextMock
             ->expects($this->any())
@@ -73,6 +79,12 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
             ->with('trilha/index/index')
             ->willReturnSelf();
 
+        $this->contextMock
+            ->expects($this->any())
+            ->method('getMessageManager')
+            ->willReturn($this->messageManagerMock);
+
+
         $this->subjectTest = new MassDelete(
             $this->PetRepositoryMock,
             $this->contextMock
@@ -87,7 +99,7 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
         $idList = ['selected' => [1,2,3,5]];
 
         $this->requestMock
-            ->expects($this->once())
+            ->expects($this->exactly(2))
             ->method('getPostValue')
             ->willReturn($idList);
         $this->PetRepositoryMock
@@ -103,16 +115,22 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
     public function testExecuteExpectsException()
     {
         $expectedResult = $this->resultRedirect;
-        $idList = [];
+        $idList = ['selected' => [1,2,3,5]];
+        $errorMessage = 'Could not save Pet';
 
         $this->requestMock
-            ->expects($this->once())
+            ->expects($this->exactly(2))
             ->method('getPostValue')
             ->willReturn($idList);
         $this->PetRepositoryMock
             ->expects($this->any())
             ->method('delete')
-            ->willReturn(true);
+            ->willThrowException(new \Exception($errorMessage));
+        $this->messageManagerMock
+            ->expects($this->once())
+            ->method('addErrorMessage')
+            ->with($errorMessage)
+            ->willReturnSelf();
 
 
         $this->assertEquals($expectedResult, $this->subjectTest->execute());

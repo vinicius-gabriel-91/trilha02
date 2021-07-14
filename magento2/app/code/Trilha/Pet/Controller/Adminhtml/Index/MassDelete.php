@@ -22,13 +22,9 @@ class MassDelete extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        $selectedIds = $this->getRequest()->getPostValue()['selected'];
-
-        if (empty($selectedIds)){
-            $this->messageManager->addErrorMessage(__("Sorry we could not find any pet kind to delete"));
-            return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
-        }
-        foreach ($selectedIds as $id){
+        if (isset($this->getRequest()->getPostValue()['selected'])){
+            $selectedIds = $this->getRequest()->getPostValue()['selected'];
+            foreach ($selectedIds as $id){
                 try{
                     $this->petRepository->delete($id);
                 } catch (\Exception $e) {
@@ -36,7 +32,10 @@ class MassDelete extends \Magento\Backend\App\Action
 
                     return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
                 }
+            }
+            return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
         }
+        $this->messageManager->addErrorMessage(__("Sorry we could not find any pet kind to delete"));
         return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
     }
 }
