@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1626277465038" stop="1626277465156" version="1.4.0">
+  <name>Trilha\Pet\Test\Unit\Block\PetNameAndKindTest</name>
+  <test-cases>
+    <test-case start="1626277465038" stop="1626277465109" status="passed">
+      <name>testShouldReturnMessageWhenCustomerLoggedInAndConfigIsEnabled</name>
+    </test-case>
+    <test-case start="1626277465109" stop="1626277465124" status="passed">
+      <name>testShouldReturnEmptyMessageWhenCustomerIsNotLoggedInButConfigIsEnabled</name>
+    </test-case>
+    <test-case start="1626277465124" stop="1626277465141" status="passed">
+      <name>testShouldReturnEmptyMessageWhenCustomerIsLoggedInButConfigIsDisabled</name>
+    </test-case>
+    <test-case start="1626277465141" stop="1626277465156" status="passed">
+      <name>testShouldReturnEmptyMessageWhenCustomerIsNotLoggedInAndConfigIsDisabled</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

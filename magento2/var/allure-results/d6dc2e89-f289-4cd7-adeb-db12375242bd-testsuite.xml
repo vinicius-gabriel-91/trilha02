@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1626277465242" stop="1626277465250" version="1.4.0">
+  <name>Trilha\Pet\Test\Unit\Model\ConfigTest</name>
+  <test-cases>
+    <test-case start="1626277465242" stop="1626277465246" status="passed">
+      <name>testConfigShouldReturnTrueWhenEnabled</name>
+    </test-case>
+    <test-case start="1626277465246" stop="1626277465250" status="passed">
+      <name>testConfigShouldReturnFalseWhenDisabled</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

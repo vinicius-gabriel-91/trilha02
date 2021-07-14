@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1626114069197" stop="1626114069209" version="1.4.0">
+  <name>Trilha\Pet\Test\Unit\Model\ConfigTest</name>
+  <test-cases>
+    <test-case start="1626114069198" stop="1626114069209" status="failed">
+      <name>testConfigShouldReturnTrueWhenEnabled</name>
+      <failure>
+        <message>Failed asserting that null is true.</message>
+        <stack-trace>#0 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php(53): PHPUnit\Framework\Constraint\Constraint-&gt;fail(NULL, '')
+#1 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/Assert.php(2228): PHPUnit\Framework\Constraint\Constraint-&gt;evaluate(NULL, '')
+#2 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/Assert.php(1022): PHPUnit\Framework\Assert::assertThat(NULL, Object(PHPUnit\Framework\Constraint\IsTrue), '')
+#3 /home/webjumpnb201/projetos/trilha/magento2/app/code/Trilha/Pet/Test/Unit/Model/ConfigTest.php(57): PHPUnit\Framework\Assert::assertTrue(NULL)
+#4 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(1414): Trilha\Pet\Test\Unit\Model\ConfigTest-&gt;testConfigShouldReturnTrueWhenEnabled()
+#5 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(1031): PHPUnit\Framework\TestCase-&gt;runTest()
+#6 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestResult.php(688): PHPUnit\Framework\TestCase-&gt;runBare()
+#7 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(772): PHPUnit\Framework\TestResult-&gt;run(Object(Trilha\Pet\Test\Unit\Model\ConfigTest))
+#8 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestSuite.php(639): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestSuite.php(639): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(653): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#11 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/Command.php(108): PHPUnit\TextUI\TestRunner-&gt;run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#12 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/Command.php(68): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#13 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#14 {main}</stack-trace>
+      </failure>
+    </test-case>
+    <test-case start="1626114069209" stop="1626114069209" status="failed">
+      <name>testConfigShouldReturnFalseWhenDisabled</name>
+      <failure>
+        <message>Expectation failed for method name is "getValue" when invoked 1 time(s).
+Method was expected to be called 1 times, actually called 0 times.
+</message>
+        <stack-trace>#0 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/MockObject/InvocationHandler.php(181): PHPUnit\Framework\MockObject\Matcher-&gt;verify()
+#1 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/MockObject/Api/Api.php(86): PHPUnit\Framework\MockObject\InvocationHandler-&gt;verify()
+#2 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(1883): Mock_ScopeConfigInterface_ef75474a-&gt;__phpunit_verify(true)
+#3 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(1032): PHPUnit\Framework\TestCase-&gt;verifyMockObjects()
+#4 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestResult.php(688): PHPUnit\Framework\TestCase-&gt;runBare()
+#5 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestCase.php(772): PHPUnit\Framework\TestResult-&gt;run(Object(Trilha\Pet\Test\Unit\Model\ConfigTest))
+#6 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestSuite.php(639): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#7 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/Framework/TestSuite.php(639): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#8 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(653): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/Command.php(108): PHPUnit\TextUI\TestRunner-&gt;run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#10 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/src/TextUI/Command.php(68): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#11 /home/webjumpnb201/projetos/trilha/magento2/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#12 {main}</stack-trace>
+      </failure>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

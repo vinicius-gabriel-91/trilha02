@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Trilha\Pet\Model;
 
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
+
 
 class Config
 {
@@ -20,9 +22,9 @@ class Config
     }
 
 
-    public function isEnabled()
+    public function isEnabled():bool
     {
-        return $this->config->getValue(self::XML_PATH_PET_NAME_KIND, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        return $this->config->isSetFlag(self::XML_PATH_PET_NAME_KIND, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
 }

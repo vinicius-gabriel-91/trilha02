@@ -14,9 +14,9 @@ use Trilha\Pet\Model\PetAttributeSource;
 
 class PetNameAndKind extends \Magento\Framework\View\Element\Template
 {
-    private Conf $config;
-    private SessionFactory $session;
-    private PetAttributeSource $petAttributeSource;
+    private $config;
+    private $session;
+    private $petAttributeSource;
 
     /**
      * Constructor
@@ -42,6 +42,7 @@ class PetNameAndKind extends \Magento\Framework\View\Element\Template
         $session = $this->session->create();
         $isLogged = $session->isLoggedIn();
         $isEnabled = $this->config->isEnabled();
+        $selectedKind ='';
 
         if ($isLogged && $isEnabled){
 

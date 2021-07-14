@@ -10,7 +10,7 @@ use Magento\Backend\Block\Widget\Context;
 class SaveButton implements ButtonProviderInterface
 {
 
-    private Context $context;
+    private $context;
 
     public function __construct(
         Context $context
