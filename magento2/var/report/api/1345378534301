@@ -1,1 +1,0 @@
-"Fatal Error: 'Declaration of Webjump\\ExerciseEight\\Model\\ExerciseEight::setOwnerId(string $getOwnerId) must be compatible with Webjump\\ExerciseEight\\Api\\Data\\ExerciseEightInterface::setOwnerId($ownerId)' in '\/var\/www\/html\/app\/code\/Webjump\/ExerciseEight\/Model\/ExerciseEight.php' on line 70"

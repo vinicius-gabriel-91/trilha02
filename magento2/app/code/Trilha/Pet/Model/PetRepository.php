@@ -31,9 +31,9 @@ class PetRepository implements PetRepositoryInterface
      * @var \Trilha\Pet\Model\PetFactory
      */
     private $petFactory;
-    private SearchCriteriaBuilder $searchCriteriaBuilder;
-    private CollectionProcessorInterface $collectionProcessor;
-    private PetSearchResultsInterfaceFactory $petSearchResults;
+    private $searchCriteriaBuilder;
+    private $collectionProcessor;
+    private $petSearchResults;
 
     public function __construct(
         PetResource $petResource,

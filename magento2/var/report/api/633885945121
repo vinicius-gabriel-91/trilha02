@@ -1,1 +1,0 @@
-"Fatal Error: 'Declaration of Magento\\Framework\\Api\\SearchResults::getItems() must be compatible with Webjump\\ExerciseEight\\Api\\Data\\ExerciseEightSearchResultInterface::getItems(): array' in '\/var\/www\/html\/app\/code\/Webjump\/ExerciseEight\/Model\/ExerciseEightSearchResult.php' on line 26"

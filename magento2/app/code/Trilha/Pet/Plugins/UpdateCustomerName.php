@@ -10,7 +10,7 @@ use Magento\Customer\Model\Session;
 class UpdateCustomerName
 {
 
-    private Session $session;
+    private $session;
 
     public function __construct(Session $session)
     {
