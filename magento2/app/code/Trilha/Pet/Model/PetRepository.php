@@ -42,9 +42,7 @@ class PetRepository implements PetRepositoryInterface
         SearchCriteriaBuilder $searchCriteriaBuilder,
         CollectionProcessorInterface $collectionProcessor,
         PetSearchResultsInterfaceFactory $petSearchResults
-    )
-    {
-
+    ) {
         $this->petResource = $petResource;
         $this->collectionFactory = $collectionFactory;
         $this->petFactory= $petFactory;
@@ -62,7 +60,7 @@ class PetRepository implements PetRepositoryInterface
     {
         $pets = $this->petFactory->create();
 
-        if ($pet->getEntityId()){
+        if ($pet->getEntityId()) {
             $this->petResource->load($pets, $pet->getEntityId());
         }
 
@@ -86,10 +84,10 @@ class PetRepository implements PetRepositoryInterface
         $pet = $this->petFactory->create();
         try {
             $this->petResource->load($pet, $id);
-            if ($pet->getEntityId() == 0){
+            if ($pet->getEntityId() == 0) {
                 throw new \Exception();
             }
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             throw new \Exception('Invalid Id');
         }
 
@@ -109,10 +107,9 @@ class PetRepository implements PetRepositoryInterface
         try {
             $this->petResource->delete($pet);
             return true;
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             throw new CouldNotSaveException(__('Could not delete Pet'), $e);
         }
-
     }
 
     /**
@@ -123,7 +120,7 @@ class PetRepository implements PetRepositoryInterface
     {
         $collection = $this->collectionFactory->create();
 
-        if($criteria == null) {
+        if ($criteria == null) {
             $criteria = $this->searchCriteriaBuilder->create();
             $criteria->setPageSize(100);
         } else {

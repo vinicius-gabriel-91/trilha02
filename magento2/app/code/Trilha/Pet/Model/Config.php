@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Trilha\Pet\Model;
 
-
 use Magento\Framework\App\Config\ScopeConfigInterface;
-
 
 class Config
 {
@@ -16,8 +14,7 @@ class Config
 
     public function __construct(
         ScopeConfigInterface $config
-    )
-    {
+    ) {
         $this->config = $config;
     }
 
@@ -26,5 +23,4 @@ class Config
     {
         return $this->config->isSetFlag(self::XML_PATH_PET_NAME_KIND, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
-
 }

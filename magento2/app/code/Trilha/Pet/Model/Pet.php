@@ -3,7 +3,6 @@
 
 namespace Trilha\Pet\Model;
 
-
 use Magento\Framework\Model\AbstractExtensibleModel;
 use Trilha\Pet\Api\Data\PetInterface;
 
@@ -28,7 +27,7 @@ class Pet extends AbstractExtensibleModel implements PetInterface
 
     public function getName(): string
     {
-       return $this->getData(self::NAME);
+        return $this->getData(self::NAME);
     }
 
     public function setName(string $name)
@@ -38,7 +37,7 @@ class Pet extends AbstractExtensibleModel implements PetInterface
 
     public function getDescription(): string
     {
-       return $this->getData(self::DESCRIPTION);
+        return $this->getData(self::DESCRIPTION);
     }
 
     public function setDescription(string $description)
@@ -50,5 +49,4 @@ class Pet extends AbstractExtensibleModel implements PetInterface
     {
         return $this->getData(self::CREATED_AT);
     }
-
 }

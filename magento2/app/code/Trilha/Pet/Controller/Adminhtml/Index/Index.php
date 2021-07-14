@@ -9,10 +9,10 @@ class Index extends \Magento\Backend\App\Action
 {
 
     /**
-     * @return ResponseInterface|\Magento\Framework\Controller\ResultInterface|\Magento\Framework\View\Result\Page
+     * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|\Magento\Framework\View\Result\Page
      */
     public function execute()
     {
-       return $this->resultFactory->create(resultFactory::TYPE_PAGE);
+        return $this->resultFactory->create(resultFactory::TYPE_PAGE);
     }
 }

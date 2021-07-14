@@ -8,24 +8,22 @@ use Trilha\Pet\Model\PetRepository;
 
 class MassDelete extends \Magento\Backend\App\Action
 {
-
     private $petRepository;
 
     public function __construct(
         PetRepository $petRepository,
         Context $context
-    )
-    {
+    ) {
         parent::__construct($context);
         $this->petRepository = $petRepository;
     }
 
     public function execute()
     {
-        if (isset($this->getRequest()->getPostValue()['selected'])){
+        if (isset($this->getRequest()->getPostValue()['selected'])) {
             $selectedIds = $this->getRequest()->getPostValue()['selected'];
-            foreach ($selectedIds as $id){
-                try{
+            foreach ($selectedIds as $id) {
+                try {
                     $this->petRepository->delete($id);
                 } catch (\Exception $e) {
                     $this->messageManager->addErrorMessage($e->getMessage());
@@ -39,4 +37,3 @@ class MassDelete extends \Magento\Backend\App\Action
         return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
     }
 }
-

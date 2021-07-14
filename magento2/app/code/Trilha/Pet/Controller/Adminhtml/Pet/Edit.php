@@ -11,10 +11,10 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Edit extends \Magento\Backend\App\Action
 {
-    private PetFactory $petFactory;
-    private PetRepository $petRepository;
-    private PetResource $petResource;
-    private PageFactory $resultPageFactory;
+    private $petFactory;
+    private $petRepository;
+    private $petResource;
+    private $resultPageFactory;
 
     public function __construct(
         Context $context,
@@ -22,8 +22,7 @@ class Edit extends \Magento\Backend\App\Action
         PetRepository $petRepository,
         PetResource $petResource,
         PageFactory $resultPageFactory
-    )
-    {
+    ) {
         parent::__construct($context);
         $this->petFactory = $petFactory;
         $this->petRepository = $petRepository;
@@ -38,16 +37,13 @@ class Edit extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-
-
         $id = $this->getRequest()->getParam('entity_id');
 
         if ($id) {
             try {
                 $model = $this->loadPet($id);
                 $id = $model->getEntityId();
-            } catch (\Exception $exception)
-             {
+            } catch (\Exception $exception) {
                 $this->messageManager->addErrorMessage(__('This Pet no longer exists.'));
                 $resultRedirect = $this->resultRedirectFactory->create();
                 return $resultRedirect->setPath('*/*/');

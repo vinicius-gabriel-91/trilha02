@@ -11,8 +11,7 @@ class PetAttributeSource extends \Magento\Eav\Model\Entity\Attribute\Source\Abst
 
     public function __construct(
         PetRepository $petRepository
-    )
-    {
+    ) {
         $this->petRepository = $petRepository;
     }
 
@@ -20,7 +19,7 @@ class PetAttributeSource extends \Magento\Eav\Model\Entity\Attribute\Source\Abst
     {
         $kindList = $this->petRepository->getList()->getItems();
 
-        foreach ($kindList as $item){
+        foreach ($kindList as $item) {
             $this->_options[] =
                 ['value' => $item->getEntityId(),
                 'label' => $item->getName()
