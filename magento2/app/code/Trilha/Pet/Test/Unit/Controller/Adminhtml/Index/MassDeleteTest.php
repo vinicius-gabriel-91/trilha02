@@ -116,7 +116,7 @@ class MassDeleteTest extends \PHPUnit\Framework\TestCase
     {
         $expectedResult = $this->resultRedirect;
         $idList = ['selected' => [1,2,3,5]];
-        $errorMessage = 'Could not save Pet';
+        $errorMessage = 'Could not delete Pet';
 
         $this->requestMock
             ->expects($this->exactly(2))

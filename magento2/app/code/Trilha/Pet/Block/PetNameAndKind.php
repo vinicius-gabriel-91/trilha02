@@ -44,14 +44,13 @@ class PetNameAndKind extends \Magento\Framework\View\Element\Template
         $isEnabled = $this->config->isEnabled();
         $selectedKind ='';
 
-        if ($isLogged && $isEnabled){
-
+        if ($isLogged && $isEnabled) {
             $petName = $session->getCustomerData()->getCustomAttribute('new_pet_name')->getValue();
             $kindId = $session->getCustomerData()->getCustomAttribute('new_pet_kind')->getValue();
 
             $kindList = $this->petAttributeSource->getAllOptions();
-            foreach ($kindList as $kind){
-                if ($kind['value'] == $kindId){
+            foreach ($kindList as $kind) {
+                if ($kind['value'] == $kindId) {
                     $selectedKind = $kind['label'];
                 }
             }
@@ -61,4 +60,3 @@ class PetNameAndKind extends \Magento\Framework\View\Element\Template
         return __('');
     }
 }
-

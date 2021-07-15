@@ -3,19 +3,16 @@
 
 namespace Trilha\Pet\Block\Adminhtml\Pet\Edit;
 
-
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 use Magento\Backend\Block\Widget\Context;
 
 class SaveButton implements ButtonProviderInterface
 {
-
     private $context;
 
     public function __construct(
         Context $context
-    )
-    {
+    ) {
         $this->context = $context;
     }
 

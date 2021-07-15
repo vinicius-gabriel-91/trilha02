@@ -36,16 +36,20 @@ class Save extends \Magento\Backend\App\Action
     public function execute()
     {
         $requestValue = $this->getRequest()->getPostValue();
-
-        if (isset($requestValue['general']['entity_id'])) {
-            $entityId = $requestValue['general']['entity_id'];
-            $pet = $this->petRepository->getById($entityId);
-            $pet->setName($requestValue['name']);
-            $pet->setDescription($requestValue['description']);
-            $this->petRepository->save($pet);
+        try {
+            if (isset($requestValue['general']['entity_id'])) {
+                $entityId = $requestValue['general']['entity_id'];
+                $pet = $this->petRepository->getById($entityId);
+                $pet->setName($requestValue['name']);
+                $pet->setDescription($requestValue['description']);
+                $this->petRepository->save($pet);
+                return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
+            }
+            $this->petFactory->create()->setData($this->getRequest()->getPostValue())->save();
+        } catch (\Exception $exception) {
+            $this->messageManager->addErrorMessage($exception->getMessage());
             return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
         }
-        $this->petFactory->create()->setData($this->getRequest()->getPostValue())->save();
 
         return $this->resultRedirectFactory->create()->setPath('trilha/index/index');
     }

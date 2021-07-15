@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Trilha\Pet\Test\Unit\Controller\Adminhtml\Index;
+namespace Trilha\Pet\Test\Unit\Controller\Adminhtml\Pet;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\View\Result\Page;
